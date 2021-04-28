@@ -1,0 +1,25 @@
+1  -	SELECT COUNT(actor_id) FROM actor;
+2  - 	SELECT last_name FROM actor WHERE first_name='John';
+3  - 	SELECT first_name FROM actor WHERE last_name='Neeson';
+4  -	SELECT * FROM actor WHERE mod(actor_id, 10) =0;
+5  -	SELECT description FROM film WHERE film_id=100;
+6  -	SELECT title FROM film WHERE rating='R';
+7  -	SELECT title FROM film WHERE rating!='R';
+8  -	SELECT title FROM film ORDER BY length DESC LIMIT 10;
+9  -	SELECT title FROM film ORDER BY length LIMIT 10;
+10 -	SELECT title FROM film WHERE special_features='Deleted Scenes';
+11 - 
+12 -
+13 - 	
+14 -
+15 - 	SELECT AVG(length) FROM film;
+16 -/Wrong/	SELECT name,     AVG(length) AS average_length FROM film AS f  INNER JOIN category AS c   ON f.film_id = c.film_id GROUP BY category  ORDER BY average_length;
+17 -	SELECT title FROM film WHERE description LIKE '%robot%';
+18 -	
+19 -
+20 -
+21 -
+22 -
+23 -
+24 -
+25 -

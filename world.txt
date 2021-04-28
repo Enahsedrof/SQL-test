@@ -1,0 +1,20 @@
+1  -	SELECT COUNT(Name) FROM city Where CountryCode='USA';
+2  -	SELECT population FROM country WHERE Name='Argentina'; SELECT LifeExpectancy FROM country WHERE Name='Argentina';
+3  - 	SELECT Name FROM country ORDER BY LifeExpectancy ASC LIMIT 1; (gives top alphabetical answer)
+4  -
+5  -
+6  - 	SELECT Name FROM city WHERE Name LIKE 'f%' LIMIT 25;
+7  -	SELECT COUNT(Name) FROM city Where CountryCode = 'CHN';
+8  -	SELECT Name FROM country Where Population!=(SELECT MIN(Population) FROM country) Limit 1;
+9  -	SELECT COUNT(DISTINCT Name) FROM country;
+10 -	SELECT name, SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 10;
+11 -	SELECT Name, Population FROM city WHERE CountryCode='JPN' ORDER BY Population DESC LIMIT 5;
+12 -	SELECT Name, Code FROM country WHERE HeadOfState='Elizabeth II';
+13 -
+14 -	SELECT DISTINCT Language FROM countrylanguage;
+15 -	SELECT Name, GNP FROM country ORDER BY GNP DESC LIMIT 10;
+16 -	
+17 -	SELECT c.Name FROM country c, countrylanguage l WHERE c.code = l.CountryCode AND l.Language = 'German' AND l.Percentage >= 50;
+18 -	
+19 -	SELECT GovernmentForm, COUNT(GovernmentForm) FROM country GROUP BY GovernmentForm ORDER BY COUNT(GovernmentForm) DESC LIMIT 3;
+20 -	SELECT COUNT(IndepYear) FROM country WHERE IndepYear!=0;
